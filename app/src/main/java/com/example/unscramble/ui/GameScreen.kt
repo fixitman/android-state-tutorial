@@ -63,7 +63,7 @@ fun GameScreen(
     gameViewModel: GameViewModel = viewModel()
 ) {
     val mediumPadding = dimensionResource(R.dimen.padding_medium)
-    val gameUiState by gameViewModel.uiState.collectAsState()
+    val gameUiState = gameViewModel._uiState.value
 
     Column(
         modifier = Modifier
